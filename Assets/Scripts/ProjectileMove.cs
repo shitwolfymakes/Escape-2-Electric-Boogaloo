@@ -25,10 +25,11 @@ public class ProjectileMove : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         speed = 0;
 
         Destroy(gameObject);
     }
+    
 }
