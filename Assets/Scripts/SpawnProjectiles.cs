@@ -9,11 +9,13 @@ public class SpawnProjectiles : MonoBehaviour
     public List<GameObject> vfx = new List<GameObject> ();
     public RotateToMouse rotateToMouse;
 
-    private GameObject effectToSpawn;
+    private GameObject laser;
+    private GameObject blaster;
     private float timeToFire = 0;
     void Start()
     {
-        effectToSpawn = vfx[0];
+        laser = vfx[0];
+        blaster = vfx[1];
     }
 
     // Update is called once per frame
@@ -21,24 +23,47 @@ public class SpawnProjectiles : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && Time.time >= timeToFire)
         {
-            timeToFire = Time.time + 1 / effectToSpawn.GetComponent<ProjectileMove>().fireRate;
-            SpawnVFX();
+            timeToFire = Time.time + 1 / laser.GetComponent<ProjectileMove>().fireRate;
+            SpawnVFX(1.0f);
+        }
+        if (Input.GetMouseButton(1) && Time.time >= timeToFire)
+        {
+            timeToFire = Time.time + 1 / blaster.GetComponent<ProjectileMove>().fireRate;
+            SpawnVFX(2.0f);
         }
     }
-    void SpawnVFX()
+    void SpawnVFX(float a)
     {
-        GameObject vfx;
-        if(firePoint != null)
-        {
-            vfx = Instantiate(effectToSpawn, firePoint.transform.position, Quaternion.identity);
-            if(rotateToMouse != null)
+        if(a < 2.0f) { 
+            GameObject vfx;
+            if(firePoint != null)
             {
-                vfx.transform.localRotation = rotateToMouse.GetRotation();
+                vfx = Instantiate(laser, firePoint.transform.position, Quaternion.identity);
+                if(rotateToMouse != null)
+                {
+                    vfx.transform.localRotation = rotateToMouse.GetRotation();
+                }
+            }
+            else
+            {
+                Debug.Log("No Fire Point");
+            }
+        } else if(a > 1.0f)
+        {
+            GameObject vfx;
+            if (firePoint != null)
+            {
+                vfx = Instantiate(blaster, firePoint.transform.position, Quaternion.identity);
+                if (rotateToMouse != null)
+                {
+                    vfx.transform.localRotation = rotateToMouse.GetRotation();
+                }
+            }
+            else
+            {
+                Debug.Log("No Fire Point");
             }
         }
-        else
-        {
-            Debug.Log("No Fire Point");
-        }
     }
+    
 }
