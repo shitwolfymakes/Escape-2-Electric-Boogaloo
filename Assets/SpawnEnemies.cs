@@ -30,22 +30,28 @@ public class SpawnEnemies : MonoBehaviour
         {
             enemyToSpawn = determineEnemy();
             nextSpawn = Time.time + spawnRate;
-            randY = Random.Range(-10f, 10f);
-            whereToSpawn = new Vector2(10, randY);
+            randY = Random.Range(-5f, 5f);
+            whereToSpawn = new Vector2(13, randY);
             Instantiate(enemyToSpawn, whereToSpawn, Quaternion.identity);
         }
         
-    }
+    } 
 
     GameObject determineEnemy()
     {
         int enemySpawnId = Random.Range(0, 100);
         if (enemySpawnId <= 50)
-            return average;
+        {
+             return average;
+        }
         else if (enemySpawnId > 50 && enemySpawnId <= 85)
-            return sprinter;
+        {
+          return sprinter;
+        }
         else
-            return bombardeer;
-
+        {
+          return bombardeer;
+        }
+    
     }
 }

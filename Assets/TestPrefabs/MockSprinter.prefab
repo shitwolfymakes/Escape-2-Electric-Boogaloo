@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8929665856207083178}
   - component: {fileID: 8929665856207083181}
   - component: {fileID: 8929665856207083180}
+  - component: {fileID: 5215680952069642423}
   m_Layer: 0
   m_Name: MockSprinter
   m_TagString: Untagged
@@ -91,3 +92,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5215680952069642423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8929665856207083183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e14b97b5d07ed64387cc2304f1b3eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 807523040957809930, guid: 029d1ea3fd52c05489a5c0726c8d22fa, type: 3}
+  initialSpeed: 8
+  targetedSpeed: 15
