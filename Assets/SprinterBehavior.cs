@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SprinterBehavior : MonoBehaviour
 {
-    public GameObject player; //position of the player will influence movement of AI
-
     private float playerX;
     private float playerY;
 
@@ -16,29 +14,44 @@ public class SprinterBehavior : MonoBehaviour
     private Vector2 targetTransform;
 
     private int readyToCharge;
+    private float bulletTimer;
+
+    public GameObject sprinterBullet;
     
     // Start is called before the first frame update
     void Start()
     {
-        playerY = GameObject.Find("MockPlayer").transform.position.y;
-        targetDistance = Random.Range(3f, 10f);
-        targetTransform = new Vector2(targetDistance, playerY);
-     
+      
+        targetDistance = Random.Range(0f, 10f);
+        readyToCharge = 0;
+        bulletTimer = 0;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-       //playerX = GameObject.Find("Player").transform.position.x;
-
+        
         if (readyToCharge == 0)
         {
+            playerX = GameObject.Find("MockPlayer").transform.position.x;
+            playerY = GameObject.Find("MockPlayer").transform.position.y;
+            targetTransform = new Vector2(targetDistance, playerY);
             transform.position = Vector2.MoveTowards(transform.position, targetTransform, initialSpeed * Time.deltaTime);
         }
         else
         {
             transform.position = new Vector2(transform.position.x - targetedSpeed * Time.deltaTime, transform.position.y);
+            bulletTimer += Time.deltaTime;
+            
+            if(transform.position.x > playerX)
+                Instantiate(sprinterBullet, transform.position, transform.rotation);
+            
+
+            if (transform.position.x <= -20) //REPLACE WITH CAMERA MIN 
+            {
+                Destroy(gameObject);
+            }
         }
         if (Vector2.Distance(transform.position, targetTransform) < 0.1f)
         {
