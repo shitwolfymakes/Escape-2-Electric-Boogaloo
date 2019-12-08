@@ -7,7 +7,10 @@ public class AverageBehaviorScript : MonoBehaviour
     public float horizontalSpeed;
     public float verticalSpeed;
     public float exitSpeed;
+    public float rateOfFire;
+    public GameObject averageBullet;
 
+    private float bulletTimer;
     private float maxHeight, minHeight;
     private Vector2 targetTransform;
     private float playerY;
@@ -18,6 +21,8 @@ public class AverageBehaviorScript : MonoBehaviour
     {
         maxHeight = 5;          //Adjust with final playfield size. Look into camera constants. 
         minHeight = -5;
+        rateOfFire = .75f;
+        bulletTimer = 0.0f;
        
         
     }
@@ -29,6 +34,13 @@ public class AverageBehaviorScript : MonoBehaviour
         playerX = GameObject.Find("MockPlayer").transform.position.x;
         
         targetTransform = new Vector2(playerX, playerY);
+        bulletTimer += Time.deltaTime;
+
+        if (bulletTimer > rateOfFire && transform.position.x > playerX + 2)
+        {
+            Shoot();
+            bulletTimer = 0.0f;
+        }
 
         if (transform.position.x > playerX + 2)     //If enemy is on right side of player
         {
@@ -44,5 +56,11 @@ public class AverageBehaviorScript : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+
+    private void Shoot()
+    {
+        Instantiate(averageBullet, transform.position, transform.rotation);
+         
     }
 }

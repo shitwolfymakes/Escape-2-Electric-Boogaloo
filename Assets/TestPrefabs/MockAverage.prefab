@@ -108,3 +108,6 @@ MonoBehaviour:
   horizontalSpeed: 8
   verticalSpeed: 3
   exitSpeed: 10
+  rateOfFire: 0
+  averageBullet: {fileID: 5314526939858654255, guid: 10b68c11a4bd3cc4ca2e0d584df02a32,
+    type: 3}

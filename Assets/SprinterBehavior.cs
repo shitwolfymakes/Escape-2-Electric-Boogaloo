@@ -9,6 +9,7 @@ public class SprinterBehavior : MonoBehaviour
 
     public float initialSpeed;
     public float targetedSpeed;
+    public float rateOfFire;
 
     private float targetDistance;
     private Vector2 targetTransform;
@@ -24,7 +25,8 @@ public class SprinterBehavior : MonoBehaviour
       
         targetDistance = Random.Range(0f, 10f);
         readyToCharge = 0;
-        bulletTimer = 0;
+        bulletTimer = .49f;
+        rateOfFire = .25f;
         
     }
 
@@ -43,10 +45,12 @@ public class SprinterBehavior : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x - targetedSpeed * Time.deltaTime, transform.position.y);
             bulletTimer += Time.deltaTime;
-            
-            if(transform.position.x > playerX)
+
+            if (transform.position.x > playerX && bulletTimer > rateOfFire)
+            {
                 Instantiate(sprinterBullet, transform.position, transform.rotation);
-            
+                bulletTimer = 0f;
+            }
 
             if (transform.position.x <= -20) //REPLACE WITH CAMERA MIN 
             {
