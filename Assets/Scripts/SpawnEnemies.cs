@@ -8,6 +8,7 @@ public class SpawnEnemies : MonoBehaviour
     public GameObject sprinter;
     public GameObject average;
     public GameObject bombardeer;
+    public GameObject tieFighter;
 
     private GameObject enemyToSpawn;
     private bool spawning;
@@ -23,6 +24,7 @@ public class SpawnEnemies : MonoBehaviour
     void Start()
     {
         levelLength = 7.5f + 30f + (10 * GameManager.Level);
+        spawnRate = 2f - (.05f * (GameManager.Level - 1));
         StartCoroutine("WaitToSpawn");
     }
 
@@ -57,17 +59,21 @@ public class SpawnEnemies : MonoBehaviour
     GameObject determineEnemy()
     {
         int enemySpawnId = Random.Range(0, 100);
-        if (enemySpawnId <= 50)
+        if (enemySpawnId <= 44)
         {
             return average;
         }
-        else if (enemySpawnId > 50 && enemySpawnId <= 85)
+        else if (enemySpawnId > 44 && enemySpawnId <= 84)
         {
             return sprinter;
         }
-        else
+        else if (enemySpawnId > 84 && enemySpawnId <= 99)
         {
             return bombardeer;
+        }
+        else
+        {
+            return tieFighter;
         }
 
     }
