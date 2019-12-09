@@ -4,10 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Destroy
-  - enemy
   - Enemy
-  - UI
   layers:
   - Default
   - TransparentFX
