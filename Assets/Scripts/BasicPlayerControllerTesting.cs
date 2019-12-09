@@ -25,7 +25,7 @@ public class BasicPlayerControllerTesting : MonoBehaviour
         {
             Debug.Log("Pew Pew");
             delayFire = Time.time + fireRate;
-            Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0.0f, 90f, 0.0f));
+            Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0.0f, 90f, 90.0f));
             GetComponent<AudioSource>().Play();
         }
     }
