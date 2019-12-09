@@ -23,8 +23,8 @@ public class AverageBehaviorScript : MonoBehaviour
         minHeight = -5;
         rateOfFire = .75f;
         bulletTimer = 0.0f;
-       
-        
+
+
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class AverageBehaviorScript : MonoBehaviour
     {
         playerY = GameObject.Find("MockPlayer").transform.position.y;
         playerX = GameObject.Find("MockPlayer").transform.position.x;
-        
+
         targetTransform = new Vector2(playerX, playerY);
         bulletTimer += Time.deltaTime;
 
@@ -55,12 +55,12 @@ public class AverageBehaviorScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+
     }
 
     private void Shoot()
     {
         Instantiate(averageBullet, transform.position, transform.rotation);
-         
+
     }
 }

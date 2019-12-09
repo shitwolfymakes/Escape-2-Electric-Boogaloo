@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4340793976511596315}
   - component: {fileID: 3875146596670854788}
   - component: {fileID: 830009914034228778}
-  - component: {fileID: 4005622368854401538}
+  - component: {fileID: 6190398774443342848}
   m_Layer: 0
   m_Name: AverageBullet
   m_TagString: Untagged
@@ -92,7 +92,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4005622368854401538
+--- !u!114 &6190398774443342848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5314526939858654255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 092a862b97c343145a7566b3d13d5cbb, type: 3}
+  m_Script: {fileID: 11500000, guid: b4fc66b8d041c0f449ea3e37d0d1f62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 20
+  bulletSpeed: 10

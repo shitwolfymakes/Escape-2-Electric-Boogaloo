@@ -31,7 +31,7 @@ public class BomberBehavior : MonoBehaviour
         shootingY = Random.Range(-5f, 5f);
         shootingPosition = new Vector2(shootingX, shootingY);
 
-           
+
     }
 
     // Update is called once per frame
@@ -63,7 +63,7 @@ public class BomberBehavior : MonoBehaviour
 
     private void Shoot()
     {
-        Instantiate(rocket, transform.position, Quaternion.Euler(0,0,90));
+        Instantiate(rocket, transform.position, Quaternion.Euler(0, 0, 90));
 
     }
 }
