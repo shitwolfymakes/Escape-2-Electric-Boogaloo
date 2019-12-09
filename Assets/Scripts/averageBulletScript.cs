@@ -22,7 +22,7 @@ public class averageBulletScript : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetTransform, bulletSpeed * Time.deltaTime);
-        if (transform.position.x <= -20) //REPLACE WITH CAMERA MIN 
+        if (transform.position.x <= (playerXtemp - 10)) //REPLACE WITH CAMERA MIN 
         {
             Destroy(gameObject);
         }
