@@ -29,8 +29,12 @@ public class DestroyAndEffect : MonoBehaviour
         }
         if(other.tag == "Player")
         {
-            Instantiate(playerDestroyed, other.transform.position, other.transform.rotation);
-            gameManager.GameOver();
+            gameManager.lowerHull();
+
+            if (gameManager.GetHullDown())
+            {
+                Instantiate(playerDestroyed, other.transform.position, other.transform.rotation);
+            }
         }
         if(effect != null)
         {
