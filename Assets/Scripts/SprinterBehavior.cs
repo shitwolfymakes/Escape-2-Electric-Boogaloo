@@ -6,6 +6,7 @@ public class SprinterBehavior : MonoBehaviour
 {
     private float playerX;
     private float playerY;
+    private float playerZ;
 
     public float initialSpeed;
     public float targetedSpeed;
@@ -35,12 +36,14 @@ public class SprinterBehavior : MonoBehaviour
         {
             playerX = GameObject.FindGameObjectWithTag("Player").transform.position.x;
             playerY = GameObject.FindGameObjectWithTag("Player").transform.position.y;
-            targetTransform = new Vector3(targetDistance, 0f, playerY);
+            playerZ = GameObject.FindGameObjectWithTag("Player").transform.position.z;
+
+            targetTransform = new Vector3(targetDistance, playerY, playerZ);
             transform.position = Vector3.MoveTowards(transform.position, targetTransform, initialSpeed * Time.deltaTime);
         }
         else
         {
-            transform.position = new Vector3(transform.position.x - targetedSpeed * Time.deltaTime, 0f, transform.position.y);
+            transform.position = new Vector3(transform.position.x - targetedSpeed * Time.deltaTime, transform.position.y, transform.position.z);
             bulletTimer += Time.deltaTime;
 
             if (transform.position.x > playerX && bulletTimer > rateOfFire)

@@ -9,7 +9,7 @@ public class averageBulletScript : MonoBehaviour
     private float playerXtemp;
     private Vector2 targetTransform;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
