@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e3fd30e17e80a394aaa08efe6e57bef5
+  - enabled: 1
+    path: Assets/Scenes/Help.unity
+    guid: 84ec7a68cc567c244b3cb339cbd69cdc
+  - enabled: 1
+    path: Assets/Scenes/BobShop.unity
+    guid: b16d7f84f9ccf49459760c2208a8ae77
+  - enabled: 1
+    path: Assets/Scenes/MadamCannon.unity
+    guid: 9e823f3f5ef8e0249a89d3613dff7196
+  - enabled: 1
+    path: Assets/Scenes/Busted.unity
+    guid: 4b9f28a2476b931409368eb3d31a4127
   m_configObjects: {}
