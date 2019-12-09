@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 472894326869725507}
   - component: {fileID: 472894326869725506}
   - component: {fileID: 472894326869725565}
-  - component: {fileID: 472894326869725567}
+  - component: {fileID: 3447737985025118037}
   m_Layer: 5
   m_Name: LevelUIprefab
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472894326869725566}
   m_CullTransparentMesh: 0
---- !u!114 &472894326869725567
+--- !u!114 &3447737985025118037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,12 +125,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 472894326869725566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0b7b7829897454fb26c7a8d0cc7189, type: 3}
+  m_Script: {fileID: 11500000, guid: dcbb14718d77bb3418d23c705aa27718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 472894328022086247}
-  moneyText: {fileID: 472894327331903634}
-  flag: 0
+  moneyLabel: {fileID: 472894327331903634}
+  scoreLabel: {fileID: 472894328022086247}
+  ShieldIcons:
+  - {fileID: 472894328563313401}
+  - {fileID: 472894328603424339}
+  - {fileID: 472894328865982317}
+  HullIcons:
+  - {fileID: 472894328747587827}
+  - {fileID: 472894328208369035}
+  - {fileID: 472894327483395766}
 --- !u!1 &472894326936559570
 GameObject:
   m_ObjectHideFlags: 0
