@@ -329,7 +329,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7531031357160245432
+--- !u!1001 &1803757233
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -339,7 +339,7 @@ PrefabInstance:
     - target: {fileID: 7531031356329764551, guid: bd8fd319f47546949b5c950b8e4c98f2,
         type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Busted
       objectReference: {fileID: 0}
     - target: {fileID: 7531031356329764411, guid: bd8fd319f47546949b5c950b8e4c98f2,
         type: 3}
