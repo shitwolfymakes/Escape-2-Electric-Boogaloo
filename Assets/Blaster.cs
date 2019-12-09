@@ -10,6 +10,14 @@ public class Blaster : MonoBehaviour
     private void Start()
     {
         
-        GetComponent<Rigidbody>().velocity = transform.right * bulletSpeed;
+        GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+    }
+
+    private void Update()
+    {
+        if(transform.position.x >= 20)
+        {
+            Destroy(gameObject);
+        }
     }
 }
