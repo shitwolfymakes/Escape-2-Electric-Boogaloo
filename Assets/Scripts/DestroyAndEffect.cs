@@ -23,10 +23,15 @@ public class DestroyAndEffect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (gameObject.CompareTag("bomb") && other.CompareTag("Enemy")
+        || other.CompareTag("bomb") && gameObject.CompareTag("Enemy")) {
+            return;
+        }
+        if (other.CompareTag("Player"))
         {
+            
             Ship ship = gameObject.GetComponent<Ship>();
-            if (ship != null)
+            if (ship.isShip)
             {
                 Destroy(other.gameObject);
                 gameManager.GameOver();
@@ -44,7 +49,7 @@ public class DestroyAndEffect : MonoBehaviour
             Instantiate(effect, other.transform.position, other.transform.rotation);
         }
 
-        if (other.tag == "Enemy" )
+        if (other.tag == "Enemy")
         {
             return;
         }

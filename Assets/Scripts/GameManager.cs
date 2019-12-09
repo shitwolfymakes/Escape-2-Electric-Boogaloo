@@ -24,11 +24,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (GameManager.gm != null)
-            Destroy(gameObject);
-        else
-            gm = this;
-
         gameOver = false;
         restart = false;
         Score = 0;
@@ -36,6 +31,10 @@ public class GameManager : MonoBehaviour
         totHull = Hull = 2;
         totShields = Shields = 2;
         Level = 1;
+        if (PlayerPrefs.GetInt("Level") > 1)
+        {
+            Level = PlayerPrefs.GetInt("Level");
+        }
         NumHealthBoosts = 1;
         NumShieldBoosts = 1;
         playerFireRate = .4f;
@@ -43,6 +42,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerPrefs.GetInt("Level") > 1)
+        {
+            Level = PlayerPrefs.GetInt("Level");
+        }
+
         if (restart)
         {
             Debug.Log("Implement Restart");
@@ -66,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     public void lowerHull()
     {
-        if(Shields <= 0)
+        if (Shields <= 0)
         {
             Hull--;
         }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
+    public bool isShip = true;
     // Start is called before the first frame update
     void Start()
     {

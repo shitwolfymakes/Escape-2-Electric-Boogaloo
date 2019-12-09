@@ -64,7 +64,7 @@ public class BomberBehavior : MonoBehaviour
 
     private void Shoot()
     {
-        Instantiate(rocket, transform.position, Quaternion.Euler(0, 0, 90));
+        Instantiate(rocket, transform.position, Quaternion.Euler(0, 90, 0));
 
     }
 }

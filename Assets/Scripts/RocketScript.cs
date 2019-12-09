@@ -24,6 +24,7 @@ public class RocketScript : MonoBehaviour
         playerXtemp = GameObject.Find("MockPlayer").transform.position.x;
         playerZtemp = GameObject.Find("MockPlayer").transform.position.z;
         targetTransform = new Vector3(playerXtemp, playerYtemp, playerZtemp);
+        gameObject.transform.LookAt(targetTransform);
 
         transform.position = Vector3.MoveTowards(transform.position, targetTransform, bulletSpeed * Time.deltaTime);
         if (transform.position.x == playerXtemp) //REPLACE WITH CAMERA MIN 
