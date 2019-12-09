@@ -58,6 +58,28 @@ public class GameManager : MonoBehaviour
         Money += addToMoney;
     }
 
+    public void lowerHull()
+    {
+        if(Shields <= 0)
+        {
+            Hull--;
+        }
+        else
+        {
+            Shields--;
+        }
+    }
+
+    public bool GetHullDown()
+    {
+        if(Hull <= 0)
+        {
+            return true;
+        }
+        return false;
+        
+    }
+
     public void BoostHull()
     {
         NumHealthBoosts--;
