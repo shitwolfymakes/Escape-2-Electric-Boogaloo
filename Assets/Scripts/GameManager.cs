@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
     public static int Score;
     public static int Money;
 
-    private static int totHull;
-    private static int totShields;
+    public static int totHull;
+    public static int totShields;
     public static int Hull;
     public static int Shields;
 
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public static int NumHealthBoosts;
     public static int NumShieldBoosts;
+    public static float playerFireRate;
 
     private bool gameOver;
     private bool restart;
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
         Level = 1;
         NumHealthBoosts = 1;
         NumShieldBoosts = 1;
+        playerFireRate = .4f;
     }
 
     private void Update()

@@ -14,7 +14,7 @@ public class ChangeScene : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
-        SceneManager.LoadScene("LevelUI");
+        SceneManager.LoadScene("DefaultLevel");
     }
 
     public void QuitGame()

@@ -466,5 +466,58 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4523010913674131806, guid: 86574864323d70948b0212d9141c4d84,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523010913840829346, guid: 86574864323d70948b0212d9141c4d84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523010913840829346, guid: 86574864323d70948b0212d9141c4d84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523010913840829346, guid: 86574864323d70948b0212d9141c4d84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523010913840829346, guid: 86574864323d70948b0212d9141c4d84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4523010912631459970}
+    - target: {fileID: 4523010913840829346, guid: 86574864323d70948b0212d9141c4d84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GrabBeer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523010913840829346, guid: 86574864323d70948b0212d9141c4d84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86574864323d70948b0212d9141c4d84, type: 3}
+--- !u!1 &4523010912631459969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4523010913840829344, guid: 86574864323d70948b0212d9141c4d84,
+    type: 3}
+  m_PrefabInstance: {fileID: 4523010912631459968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4523010912631459970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523010912631459969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d3bd652cf150d488cfbc3185cced03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
