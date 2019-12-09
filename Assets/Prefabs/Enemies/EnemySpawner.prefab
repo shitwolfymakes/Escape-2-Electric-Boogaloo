@@ -44,9 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  sprinter: {fileID: 1400127438361781298, guid: 334b61fc1c34ed94f843efa77e188747,
+  sprinter: {fileID: 8929665856207083183, guid: de6029a5b0e53fb47b0e62e1fd1e83ca,
     type: 3}
-  average: {fileID: 1400127438361781298, guid: 334b61fc1c34ed94f843efa77e188747, type: 3}
-  bombardeer: {fileID: 1400127438361781298, guid: 334b61fc1c34ed94f843efa77e188747,
+  average: {fileID: 2705863277212049097, guid: 1e3dfc7876380724da777af68c94be43, type: 3}
+  bombardeer: {fileID: 8709513500075288809, guid: bbc2680dc5ce4f64bab5e982e8f9669c,
+    type: 3}
+  tieFighter: {fileID: 1400127438361781298, guid: 334b61fc1c34ed94f843efa77e188747,
     type: 3}
   spawnRate: 2
