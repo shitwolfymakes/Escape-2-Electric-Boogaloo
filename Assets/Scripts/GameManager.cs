@@ -6,9 +6,17 @@ public class GameManager : MonoBehaviour
 {
     public static int Score;
     public static int Money;
+
+    private static int totHull;
+    private static int totShields;
     public static int Hull;
     public static int Shields;
-    public static int Level = 0;
+
+    public static int Level;
+
+    public static int NumHealthBoosts;
+    public static int NumShieldBoosts;
+
     private bool gameOver;
     private bool restart;
 
@@ -18,8 +26,11 @@ public class GameManager : MonoBehaviour
         restart = false;
         Score = 0;
         Money = 50;
-        Hull = 2;
-        Shields = 2;
+        totHull = Hull = 2;
+        totShields = Shields = 2;
+        Level = 1;
+        NumHealthBoosts = 1;
+        NumShieldBoosts = 1;
     }
 
     private void Update()
@@ -30,7 +41,8 @@ public class GameManager : MonoBehaviour
         }
         if (Hull <= 0)
         {
-            GameOver();
+            Debug.Log("Dead");
+            //GameOver();
         }
     }
 
@@ -46,12 +58,30 @@ public class GameManager : MonoBehaviour
 
     public void BoostHull()
     {
-        Debug.Log("Not implemented");
+        NumHealthBoosts--;
+        StartCoroutine("HullUP");
+    }
+
+    IEnumerator HullUP()
+    {
+        Hull = 5;
+        yield return new WaitForSeconds(3);
+        if (totHull < Hull)
+            Hull = totHull;
     }
 
     public void BoostShields()
     {
-        Debug.Log("Not implemented");
+        NumShieldBoosts--;
+        StartCoroutine("ShieldUP");
+    }
+
+    IEnumerator ShieldUP()
+    {
+        Shields = 5;
+        yield return new WaitForSeconds(3);
+        if (totShields < Shields)
+            Shields = totShields;
     }
 
     public void GameOver()
@@ -60,6 +90,4 @@ public class GameManager : MonoBehaviour
         ChangeScene cs = new ChangeScene();
         cs.loadBusted();
     }
-
-
 }

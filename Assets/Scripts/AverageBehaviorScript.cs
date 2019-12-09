@@ -64,6 +64,5 @@ public class AverageBehaviorScript : MonoBehaviour
     private void Shoot()
     {
         Instantiate(averageBullet, transform.position, transform.rotation);
-
     }
 }
