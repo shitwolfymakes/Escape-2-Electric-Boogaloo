@@ -51,9 +51,9 @@ public class BomberBehavior : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector2(transform.position.x, transform.position.y + (verticalSpeed * Time.deltaTime));
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + (verticalSpeed * Time.deltaTime));
 
-            if (transform.position.y >= maxHeight || transform.position.y <= minHeight)
+            if (transform.position.z >= maxHeight || transform.position.z <= minHeight)
             {
                 verticalSpeed *= -1;
             }
