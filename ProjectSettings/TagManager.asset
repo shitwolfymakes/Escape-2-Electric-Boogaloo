@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemy
   - Boundary
+  - enemy
+  - Destroy
+  - UI
+  - Ship
+  - bomb
   layers:
   - Default
   - TransparentFX
