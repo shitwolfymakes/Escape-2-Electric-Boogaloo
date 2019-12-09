@@ -32,7 +32,7 @@ public class SpawnEnemies : MonoBehaviour
             nextSpawn = Time.time + spawnRate;
             randY = Random.Range(-5f, 5f);
 
-            whereToSpawn = new Vector2((Random.Range(20f, 27f)), randY);
+            whereToSpawn = new Vector2((Random.Range(27f, 35f)), randY);
 
             Instantiate(enemyToSpawn, whereToSpawn, Quaternion.identity);
         }
