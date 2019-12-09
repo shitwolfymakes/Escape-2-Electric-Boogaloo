@@ -14,7 +14,7 @@ public class SpawnEnemies : MonoBehaviour
     float randY;
     Vector2 whereToSpawn;
 
-    public float spawnDelay = 2f;
+    public float spawnRate = 2f;
     float nextSpawn = 0.0f;
 
     // Start is called before the first frame update
@@ -29,11 +29,10 @@ public class SpawnEnemies : MonoBehaviour
         if (Time.time > nextSpawn)
         {
             enemyToSpawn = determineEnemy();
-            nextSpawn = Time.time + spawnDelay;
+            nextSpawn = Time.time + spawnRate;
             randY = Random.Range(-5f, 5f);
             whereToSpawn = new Vector2(13, randY);
-            GameObject enemy = Instantiate(enemyToSpawn, whereToSpawn, Quaternion.identity);
-            // select enemy loadout here
+            Instantiate(enemyToSpawn, whereToSpawn, Quaternion.identity);
         }
         
     } 
