@@ -12,9 +12,10 @@ public class AverageBehaviorScript : MonoBehaviour
 
     private float bulletTimer;
     private float maxHeight, minHeight;
-    private Vector2 targetTransform;
+    private Vector3 targetTransform;
     private float playerY;
     private float playerX;
+    private float playerZ;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +31,12 @@ public class AverageBehaviorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerY = GameObject.Find("MockPlayer").transform.position.y;
         playerX = GameObject.Find("MockPlayer").transform.position.x;
+        playerY = GameObject.Find("MockPlayer").transform.position.y;
+        playerZ = GameObject.Find("MockPlayer").transform.position.z;
 
-        targetTransform = new Vector2(playerX, playerY);
+        targetTransform = new Vector3(playerX, 0, playerZ);
+
         bulletTimer += Time.deltaTime;
 
         if (bulletTimer > rateOfFire && transform.position.x > playerX + 2)
@@ -44,14 +47,14 @@ public class AverageBehaviorScript : MonoBehaviour
 
         if (transform.position.x > playerX + 2)     //If enemy is on right side of player
         {
-            transform.position = Vector2.MoveTowards(transform.position, targetTransform, horizontalSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetTransform, horizontalSpeed * Time.deltaTime);
         }
         else
         {
-            transform.position = new Vector2(transform.position.x - exitSpeed * Time.deltaTime, transform.position.y);
+            transform.position = new Vector3(transform.position.x - exitSpeed * Time.deltaTime, transform.position.y, transform.position.z);
         }
 
-        if (transform.position.x <= -20) //REPLACE WITH CAMERA MIN 
+        if (transform.position.x <= -50) //REPLACE WITH CAMERA MIN 
         {
             Destroy(gameObject);
         }

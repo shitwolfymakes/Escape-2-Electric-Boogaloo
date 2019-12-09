@@ -15,7 +15,7 @@ public class SprinterBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x - (bulletSpeed * Time.deltaTime), 0f, transform.position.y);
+        transform.position = new Vector3(transform.position.x - (bulletSpeed * Time.deltaTime), transform.position.y, transform.position.z);
 
         if (transform.position.x <= -20) //REPLACE WITH CAMERA MIN 
         {
