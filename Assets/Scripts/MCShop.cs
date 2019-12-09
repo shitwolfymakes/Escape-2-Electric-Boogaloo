@@ -32,7 +32,7 @@ public class MCShop : MonoBehaviour
         {
             GameManager.Money -= 300;
             GameManager.totHull++;
-            GameManager.totHull = GameManager.Hull;
+            GameManager.Hull = GameManager.totHull;
         }
     }
 
