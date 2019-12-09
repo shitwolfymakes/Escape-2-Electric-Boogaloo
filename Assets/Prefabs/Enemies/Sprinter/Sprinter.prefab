@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 2239311752679920845}
   - component: {fileID: 7623412846069689097}
   - component: {fileID: 6603081310513403359}
+  - component: {fileID: 3817437498852139595}
   m_Layer: 0
   m_Name: Sprinter
   m_TagString: enemy
@@ -138,6 +139,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2919cbb2c7091049a97b2c704f8b684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3817437498852139595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400127438361781298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e14b97b5d07ed64387cc2304f1b3eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSpeed: 8
+  targetedSpeed: 17
+  rateOfFire: 0.1
+  sprinterBullet: {fileID: 7674398780752835919, guid: 1299d6f2ca480194da53dfc73de576cd,
+    type: 3}
 --- !u!1 &2019886692606860437
 GameObject:
   m_ObjectHideFlags: 0

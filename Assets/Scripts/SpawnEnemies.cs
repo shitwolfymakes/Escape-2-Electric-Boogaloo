@@ -20,7 +20,7 @@ public class SpawnEnemies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -36,24 +36,24 @@ public class SpawnEnemies : MonoBehaviour
 
             Instantiate(enemyToSpawn, whereToSpawn, Quaternion.identity);
         }
-        
-    } 
+
+    }
 
     GameObject determineEnemy()
     {
         int enemySpawnId = Random.Range(0, 100);
         if (enemySpawnId <= 50)
         {
-             return average;
+            return average;
         }
         else if (enemySpawnId > 50 && enemySpawnId <= 85)
         {
-          return sprinter;
+            return sprinter;
         }
         else
         {
-          return bombardeer;
+            return bombardeer;
         }
-    
+
     }
 }

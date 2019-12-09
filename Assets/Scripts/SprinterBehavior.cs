@@ -9,41 +9,38 @@ public class SprinterBehavior : MonoBehaviour
 
     public float initialSpeed;
     public float targetedSpeed;
-    public float rateOfFire;
+    public float rateOfFire = .1f;
 
     private float targetDistance;
-    private Vector2 targetTransform;
+    private Vector3 targetTransform;
 
     private int readyToCharge;
     private float bulletTimer;
 
     public GameObject sprinterBullet;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-      
         targetDistance = Random.Range(0f, 10f);
         readyToCharge = 0;
         bulletTimer = .49f;
-        rateOfFire = .25f;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         if (readyToCharge == 0)
         {
-            playerX = GameObject.Find("MockPlayer").transform.position.x;
-            playerY = GameObject.Find("MockPlayer").transform.position.y;
-            targetTransform = new Vector2(targetDistance, playerY);
-            transform.position = Vector2.MoveTowards(transform.position, targetTransform, initialSpeed * Time.deltaTime);
+            playerX = GameObject.FindGameObjectWithTag("Player").transform.position.x;
+            playerY = GameObject.FindGameObjectWithTag("Player").transform.position.y;
+            targetTransform = new Vector3(targetDistance, 0f, playerY);
+            transform.position = Vector3.MoveTowards(transform.position, targetTransform, initialSpeed * Time.deltaTime);
         }
         else
         {
-            transform.position = new Vector2(transform.position.x - targetedSpeed * Time.deltaTime, transform.position.y);
+            transform.position = new Vector3(transform.position.x - targetedSpeed * Time.deltaTime, 0f, transform.position.y);
             bulletTimer += Time.deltaTime;
 
             if (transform.position.x > playerX && bulletTimer > rateOfFire)
@@ -57,12 +54,9 @@ public class SprinterBehavior : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if (Vector2.Distance(transform.position, targetTransform) < 0.1f)
+        if (Vector3.Distance(transform.position, targetTransform) < 0.1f)
         {
             readyToCharge = 1;
         }
-        
-       
-        
     }
 }

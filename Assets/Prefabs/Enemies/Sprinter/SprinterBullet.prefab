@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7662692902442194512}
   - component: {fileID: 4079085747756806600}
   - component: {fileID: 8913799754160127830}
-  - component: {fileID: 2124203136467015804}
+  - component: {fileID: 3929805903005764227}
   m_Layer: 0
   m_Name: SprinterBullet
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7674398780752835919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.08, y: 2.532, z: -0.037476}
-  m_LocalScale: {x: 0.55989254, y: 0.15622, z: 0.15622}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -87,12 +87,12 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7674398780752835919}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2124203136467015804
+--- !u!114 &3929805903005764227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7674398780752835919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aa7430047c2c7148956feb9e8cd50f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fb27b14e63a15e4b825727e55c4e9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 70
+  bulletSpeed: 50
