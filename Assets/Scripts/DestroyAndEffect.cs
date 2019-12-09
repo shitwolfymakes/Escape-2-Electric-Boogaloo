@@ -11,7 +11,7 @@ public class DestroyAndEffect : MonoBehaviour
 
     private void Start()
     {
-        GameObject game = GameObject.FindGameObjectWithTag("GameManager");
+        GameObject game = GameObject.Find("GameManager");
         if(game == null)
         {
             Debug.Log("Can't Find GameManager");

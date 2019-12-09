@@ -42,5 +42,10 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("MadamCannon");
     }
 
+    public void loadBusted()
+    {
+        SceneManager.LoadScene("Busted");
+    }
+
 
 }
