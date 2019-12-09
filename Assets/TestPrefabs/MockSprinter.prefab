@@ -104,7 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e14b97b5d07ed64387cc2304f1b3eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpeed: 8
+  initialSpeed: 9
   targetedSpeed: 17
+  rateOfFire: 0.1
   sprinterBullet: {fileID: 7674398780752835919, guid: 1299d6f2ca480194da53dfc73de576cd,
     type: 3}

@@ -13,8 +13,8 @@ public class BomberBehavior : MonoBehaviour
     private float maxHeight, minHeight;
     private Vector2 shootingPosition;
 
+    private float shootingZ;
     private float shootingX;
-    private float shootingY;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +27,10 @@ public class BomberBehavior : MonoBehaviour
 
         //Calculate random position for bomber to stop and move up and down. 
         //Values will need to change once we get size of field
-        shootingX = Random.Range(5f, 20f);
-        shootingY = Random.Range(-5f, 5f);
-        shootingPosition = new Vector2(shootingX, shootingY);
+       // shootingX = Random.Range(5f, 20f);
+        shootingX = Random.Range(10f, 15f);
+        shootingZ = Random.Range(-5f, 5f);
+        shootingPosition = new Vector3 (shootingX, 0.0f, shootingZ);
 
 
     }
@@ -47,7 +48,7 @@ public class BomberBehavior : MonoBehaviour
 
         if (transform.position.x > shootingPosition.x)     //If enemy is on right side of shooting Position
         {
-            transform.position = Vector2.MoveTowards(transform.position, shootingPosition, horizontalSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, shootingPosition, horizontalSpeed * Time.deltaTime);
         }
         else
         {

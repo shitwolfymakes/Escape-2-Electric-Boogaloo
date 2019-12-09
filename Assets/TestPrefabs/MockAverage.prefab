@@ -105,9 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e234aa6c4e014408cf462315fbc6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 5
+  horizontalSpeed: 15
   verticalSpeed: 5
-  exitSpeed: 10
+  exitSpeed: 17
   rateOfFire: 0
   averageBullet: {fileID: 5314526939858654255, guid: 10b68c11a4bd3cc4ca2e0d584df02a32,
     type: 3}

@@ -11,7 +11,7 @@ public class SpawnEnemies : MonoBehaviour
 
     private GameObject enemyToSpawn;
 
-    float randY;
+    float randZ;
     Vector3 whereToSpawn;
 
     public float spawnRate = 2f;
@@ -26,13 +26,14 @@ public class SpawnEnemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Time.time > nextSpawn)
         {
             enemyToSpawn = determineEnemy();
             nextSpawn = Time.time + spawnRate;
-            randY = Random.Range(-5f, 5f);
+            randZ = Random.Range(-5f, 5f);
 
-            whereToSpawn = new Vector3(Random.Range(27f, 35f), 0f, randY);
+            whereToSpawn = new Vector3(Random.Range(27f, 35f), 0.0f, randZ);
 
             Instantiate(enemyToSpawn, whereToSpawn, Quaternion.identity);
         }
