@@ -169,6 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d16f910a066674e8e17943ca373181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: {fileID: 0}
+  playerDestroyed: {fileID: 0}
+  scoreAmount: 0
 --- !u!1 &2019886692606860437
 GameObject:
   m_ObjectHideFlags: 0
