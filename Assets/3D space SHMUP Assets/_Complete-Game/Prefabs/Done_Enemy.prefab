@@ -4661,7 +4661,7 @@ GameObject:
   - component: {fileID: 11400008}
   - component: {fileID: 8200000}
   m_Layer: 0
-  m_Name: Done_Enemy Ship
+  m_Name: Done_Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

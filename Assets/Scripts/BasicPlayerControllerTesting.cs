@@ -21,11 +21,11 @@ public class BasicPlayerControllerTesting : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButton("Fire1") && Time.deltaTime > delayFire)
+        if(Input.GetButton("Fire1") && Time.time > delayFire)
         {
             Debug.Log("Pew Pew");
             delayFire = Time.time + fireRate;
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            Instantiate(bullet, firePoint.position, Quaternion.Euler(0.0f, 90f, 0.0f));
             GetComponent<AudioSource>().Play();
         }
     }
