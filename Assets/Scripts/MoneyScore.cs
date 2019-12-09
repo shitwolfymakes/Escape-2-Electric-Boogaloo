@@ -20,11 +20,8 @@ public class MoneyScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = 0;
-        money = 0;
-        scoreText.text = "Score: " + score;
-        moneyText.text = "Money: " + money;
-
+        moneyText.text = "Money: " + GameManager.Money;
+        scoreText.text = "Score: " + GameManager.Score;
         //increase money and score by collecting certain items.
     }
 }

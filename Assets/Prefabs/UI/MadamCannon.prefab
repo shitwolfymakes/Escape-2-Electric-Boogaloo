@@ -1637,7 +1637,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Attack Power
+  m_Text: Attack Speed
 --- !u!1 &1633994429613001342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,6 +1966,7 @@ GameObject:
   - component: {fileID: 1633994429805667304}
   - component: {fileID: 1633994429805667307}
   - component: {fileID: 1633994429805667306}
+  - component: {fileID: 1186463011627259859}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -2069,9 +2070,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1633994429805667307}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1186463011627259859}
+        m_MethodName: AttackUP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1186463011627259859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633994429805667316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a7dc31fbbf84548a240304dbb29515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1633994430101908336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2252,7 @@ GameObject:
   - component: {fileID: 1633994430109864914}
   - component: {fileID: 1633994430109864925}
   - component: {fileID: 1633994430109864924}
+  - component: {fileID: 8834759553240605122}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -2331,9 +2356,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1633994430109864925}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8834759553240605122}
+        m_MethodName: HullUP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8834759553240605122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633994430109864926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a7dc31fbbf84548a240304dbb29515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1633994430173860556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,6 +2394,7 @@ GameObject:
   - component: {fileID: 1633994430173860544}
   - component: {fileID: 1633994430173860547}
   - component: {fileID: 1633994430173860546}
+  - component: {fileID: 6548424653882987978}
   m_Layer: 5
   m_Name: Shield
   m_TagString: Untagged
@@ -2449,9 +2498,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1633994430173860547}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6548424653882987978}
+        m_MethodName: ShieldsUP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6548424653882987978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633994430173860556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a7dc31fbbf84548a240304dbb29515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1633994430185128793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,7 +2823,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome! Get yer fixen and light these B****'s up!
+  m_Text: Welcome! Get yer fixen and light these B****'s up! Everything costs $1000!
 --- !u!1 &3521086439815264113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,8 +2987,9 @@ GameObject:
   - component: {fileID: 3521086440416634142}
   - component: {fileID: 3521086440416634143}
   - component: {fileID: 3521086440416634145}
+  - component: {fileID: 3583752177314314401}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MadamCannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3029,6 +3102,18 @@ MonoBehaviour:
   scoreText: {fileID: 1633994429723228353}
   moneyText: {fileID: 1633994429473555844}
   flag: 0
+--- !u!114 &3583752177314314401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3521086440416634144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a7dc31fbbf84548a240304dbb29515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3521086440786870699
 GameObject:
   m_ObjectHideFlags: 0
