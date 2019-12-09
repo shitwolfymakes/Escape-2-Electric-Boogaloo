@@ -17,12 +17,18 @@ public class GameManager : MonoBehaviour
     public static int NumHealthBoosts;
     public static int NumShieldBoosts;
     public static float playerFireRate;
+    public static GameManager gm;
 
     private bool gameOver;
     private bool restart;
 
     private void Start()
     {
+        if (GameManager.gm != null)
+            Destroy(gameObject);
+        else
+            gm = this;
+
         gameOver = false;
         restart = false;
         Score = 0;
@@ -44,7 +50,7 @@ public class GameManager : MonoBehaviour
         if (Hull <= 0)
         {
             Debug.Log("Dead");
-            //GameOver();
+            GameOver();
         }
     }
 

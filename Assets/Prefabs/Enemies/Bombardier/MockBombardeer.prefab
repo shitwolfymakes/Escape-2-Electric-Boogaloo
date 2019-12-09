@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7847121440357451888}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2609133431907423857}
   - component: {fileID: 705400665901947164}
   - component: {fileID: 4959991915169281382}
+  - component: {fileID: 509845801053653296}
   m_Layer: 0
   m_Name: MockBombardeer
   m_TagString: Enemy
@@ -172,3 +173,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &509845801053653296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8709513500075288809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c274f62b730824247a576fd59ba7421e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

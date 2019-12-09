@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8342825128231873433}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 8929665856207083180}
   - component: {fileID: 5215680952069642423}
   - component: {fileID: 1571688941451204877}
+  - component: {fileID: 2925489101576730785}
   m_Layer: 0
   m_Name: MockSprinter
   m_TagString: Untagged
@@ -156,3 +157,15 @@ MonoBehaviour:
   effect: {fileID: 0}
   playerDestroyed: {fileID: 0}
   scoreAmount: 0
+--- !u!114 &2925489101576730785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8929665856207083183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c274f62b730824247a576fd59ba7421e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
