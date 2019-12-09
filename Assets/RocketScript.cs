@@ -7,7 +7,8 @@ public class RocketScript : MonoBehaviour
     public float bulletSpeed;
     private float playerYtemp;
     private float playerXtemp;
-    private Vector2 targetTransform;
+    private float playerZtemp;
+    private Vector3 targetTransform;
 
 
     // Start is called before the first frame update
@@ -21,9 +22,10 @@ public class RocketScript : MonoBehaviour
     {
         playerYtemp = GameObject.Find("MockPlayer").transform.position.y;
         playerXtemp = GameObject.Find("MockPlayer").transform.position.x;
-        targetTransform = new Vector2(playerXtemp, playerYtemp);
+        playerZtemp = GameObject.Find("MockPlayer").transform.position.z;
+        targetTransform = new Vector3(playerXtemp, playerYtemp, playerZtemp);
 
-        transform.position = Vector2.MoveTowards(transform.position, targetTransform, bulletSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetTransform, bulletSpeed * Time.deltaTime);
         if (transform.position.x == playerXtemp) //REPLACE WITH CAMERA MIN 
         {
             Destroy(gameObject);
