@@ -17,24 +17,37 @@ public class GameManager : MonoBehaviour
     public static int NumHealthBoosts;
     public static int NumShieldBoosts;
     public static float playerFireRate;
-    public static GameManager gm;
 
     private bool gameOver;
-    private bool restart;
 
+    private static GameManager _instance;
+
+    public static GameManager Instance { get { return _instance; } }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        } else {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     private void Start()
     {
         gameOver = false;
-        restart = false;
         Score = 0;
         Money = 50;
         totHull = Hull = 2;
         totShields = Shields = 2;
         Level = 1;
-        if (PlayerPrefs.GetInt("Level") > 1)
+        if (PlayerPrefs.GetInt("Level", 1) != 1)
         {
-            Level = PlayerPrefs.GetInt("Level");
+            // we're creating this gamemanager after the first level
+            Debug.Log("Created at Level " + PlayerPrefs.GetInt("Level"));
         }
+
         NumHealthBoosts = 1;
         NumShieldBoosts = 1;
         playerFireRate = .4f;
@@ -42,15 +55,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerPrefs.GetInt("Level") > 1)
-        {
-            Level = PlayerPrefs.GetInt("Level");
-        }
-
-        if (restart)
-        {
-            Debug.Log("Implement Restart");
-        }
         if (Hull <= 0)
         {
             Debug.Log("Dead");
@@ -123,5 +127,10 @@ public class GameManager : MonoBehaviour
         gameOver = true;
         ChangeScene cs = new ChangeScene();
         cs.loadBusted();
+    }
+
+    public void EndLevel() {
+        Level++;
+        PlayerPrefs.SetInt("Level", Level);
     }
 }

@@ -25,6 +25,7 @@ public class SpawnEnemies : MonoBehaviour
     {
         levelLength = 7.5f + 30f + (10 * GameManager.Level);
         spawnRate = 2f - (.05f * (GameManager.Level - 1));
+        Debug.Log("Level length = " + levelLength + ", " + "Spawn rate = " + spawnRate);
         StartCoroutine("WaitToSpawn");
     }
 
